@@ -9,7 +9,7 @@ import { PersonagemService } from '../service/personagem.service';
 })
 export class PersonagemComponent implements OnInit {
   public lstPersonagens: any[] = [];
-  public eventos : string[] = [];
+  public eventos : EventoResult[] = [];
 
   constructor(private personagemService : PersonagemService) { }
 
@@ -35,13 +35,16 @@ export class PersonagemComponent implements OnInit {
     this.eventos = [];
     let str1 = evento.split('&&');
 
-    for(let i = 0; i< str1.length; i++){
+    for(let i = 0; i< str1.length-1; i++){
       let str2 = str1[i].split('/n',4);
 
-      this.eventos.push(str2[0]);
-      this.eventos.push(str2[1]);
-      this.eventos.push(str2[2]);
-      this.eventos.push(str2[3]);
+      let novoEvento : EventoResult = {
+        id: str2[0],
+        titulo: str2[1],
+        descricao: str2[2],
+        imagemEvento: str2[3]
+      }
+      this.eventos.push(novoEvento);
     }
   }
 }
