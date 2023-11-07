@@ -1,0 +1,15 @@
+.div-table{
+  width: 50%;
+  display: inline-block;
+}
+
+.card-evento{
+  display: inline-block;
+}
+
+.div-principal{
+  margin: auto;
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+}

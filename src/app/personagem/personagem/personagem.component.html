@@ -1,0 +1,27 @@
+<div class="div-principal">
+  <h1>Buscar Personagem</h1>
+  <div class="div-align-center">
+    <label>Nome do Personagem: </label>
+    <input #nome type="text" />
+    <a href="#" (click)="Buscar(nome.value)" class="btn btn-primary">Buscar</a>
+  </div>
+</div>
+<br>
+
+<div class="div-table">
+  <div class="div-table" *ngFor="let item of lstPersonagens">
+    <img src={{item.imagemPersonagem}} class="div-table" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{item.nome}}</h5>
+      <p class="card-text">{{item.descricao}}</p>
+      <a href="#" (click)="SepararStringEvento(item.eventoResult)" class="btn btn-primary">Eventos</a>
+    </div>
+  </div>
+  <div *ngFor="let item of eventos">
+    <div>
+      <h3 class="">{{item}}</h3>
+    </div>
+  </div>
+</div>
+
+
