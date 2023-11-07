@@ -17,13 +17,20 @@
       <a href="#" (click)="SepararStringEvento(item.eventoResult)" class="btn btn-primary">Eventos</a>
     </div>
   </div>
-  <div class="card" style="width: 18rem;" *ngFor="let item of eventos">
-    <img class="card-img-top" src={{item.imagemEvento}} alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">{{item.titulo}}</h5>
-      <p class="card-text">{{item.descricao}}</p>
+  <div>
+    <div class="card" style="width: 18rem;" *ngFor="let item of eventos">
+      <div class="div-principal">
+        <h1>Evento Encontrado</h1>
+      </div>
+      <br>
+      <img class="card-img-top" src={{item.imagemEvento}} alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{item.titulo}}</h5>
+        <p class="card-text">{{item.descricao}}</p>
+      </div>
     </div>
   </div>
 </div>
+
 
 

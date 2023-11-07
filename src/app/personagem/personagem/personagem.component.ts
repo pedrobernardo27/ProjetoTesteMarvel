@@ -16,6 +16,7 @@ export class PersonagemComponent implements OnInit {
   async ngOnInit() {}
 
   async Buscar(nome : string) {
+    this.lstPersonagens = [];
 
     let lstPersonagensResult = await this.personagemService.BuscarPersonagem(nome);
 
